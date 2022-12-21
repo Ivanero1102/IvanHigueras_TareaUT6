@@ -31,8 +31,8 @@ document.querySelector("input[name='apellidos']").addEventListener("blur", () =>
 
 /* 6 */
 // addEventListener("input")
-let parrafo = document.createElement("p");
-document.querySelector("input[name='nacido']").insertAdjacentElement("afterend", parrafo);
+let parrafoFecha = document.createElement("p");
+document.querySelector("input[name='nacido']").insertAdjacentElement("afterend", parrafoFecha);
 document.querySelector("input[name='nacido']").addEventListener("blur", () => {
     let texto;
     if(document.querySelector("input[name='nacido']").value%4 == 0){
@@ -40,7 +40,7 @@ document.querySelector("input[name='nacido']").addEventListener("blur", () => {
     }else{
         texto = "Año no bisiesto";
     }
-    parrafo.innerText = texto;
+    parrafoFecha.innerText = texto;
 });
 
 /* 7 */
@@ -49,8 +49,9 @@ document.querySelector("select[name='lista1']").addEventListener("input", () => 
 });
 
 /* 8 */
-
-
+let parrafoCambiaValor = document.createElement("p");
+document.querySelector("p > input[name='casilla3'] p").insertAdjacentElement("beforebegin", parrafoCambiaValor);
+parrafoCambiaValor.innerText = "Funciona";
 /* 9 */
 
 
